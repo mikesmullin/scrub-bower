@@ -1,0 +1,25 @@
+{
+  "name": "scrub-bower",
+  "version": "1.0.0",
+  "description": "Scrub Bower installed files using a glob-star formatted blacklist from within your bower.json file",
+  "main": "index.js",
+  "bin": {
+    "scrub-bower": "./bin/scrub-bower"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sbimikesmullin/scrub-bower.git"
+  },
+  "author": "Mike Smullin <mike.smullin@wildworks.com>",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/sbimikesmullin/scrub-bower/issues"
+  },
+  "homepage": "https://github.com/sbimikesmullin/scrub-bower#readme",
+  "dependencies": {
+    "glob": "^7.0.3"
+  }
+}
