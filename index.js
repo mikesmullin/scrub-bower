@@ -9,7 +9,6 @@ const CWD = process.cwd();
 // configuration; assumes you already created these during bower installation
 const bowerJsonIgnore = require(path.join(CWD, 'bower.json')).dependenciesIgnore;
 const bowerRcDirectory = JSON.parse(fs.readFileSync(path.join(CWD, '.bowerrc'))).directory;
-
 // arguments
 const DRY = '--dry' == (process.argv[2] || '').toLowerCase();
 if (DRY) console.log('dry run will now describe operations without performing any.');
@@ -33,7 +32,7 @@ var matched = 0, removed = 0;
 for (let dep in bowerJsonIgnore) {
   if (bowerJsonIgnore.hasOwnProperty(dep)) {
     let globs = bowerJsonIgnore[dep];
-    let options = { cwd: path.join(CWD, bowerRcDirectory, dep), dot: true };
+    let options = { cwd: path.join(bowerRcDirectory, dep), dot: true };
     if (DRY) console.log('\n'+ path.relative(process.cwd(), options.cwd) +'/:');
     for (let i=0; i<globs.length; i++) {
       let pattern = globs[i];
